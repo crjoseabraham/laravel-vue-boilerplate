@@ -1,10 +1,12 @@
 require('./bootstrap');
 
 import { createApp } from 'vue'
-import axios from 'axios'
+import '../css/app.css'
 import Home from './components/Home.vue';
+import store from './store';
+import router from './router/index,js';
 
-const app = createApp({});
-
-app.component('home', Home)
-app.mount('#app')
+createApp(Home)
+    .use(store)
+    .use(router)
+    .mount('#app')
