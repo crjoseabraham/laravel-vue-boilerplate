@@ -17,6 +17,7 @@ export default createStore({
         logout: state => {
             state.user.data = {}
             state.user.token = null
+            sessionStorage.clear()
         },
         setUser: (state, userData) => {
             state.user.token = userData.token

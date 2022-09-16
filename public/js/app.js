@@ -21243,6 +21243,7 @@ __webpack_require__.r(__webpack_exports__);
     logout: function logout(state) {
       state.user.data = {};
       state.user.token = null;
+      sessionStorage.clear();
     },
     setUser: function setUser(state, userData) {
       state.user.token = userData.token;
